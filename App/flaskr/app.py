@@ -10,8 +10,8 @@ app.config['MYSQL_DB'] = 'apnr_log'
 
 mysql = MySQL(app)
 
-cam = cv2.VideoCapture("static/img/Video.mp4")
-# cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+# cam = cv2.VideoCapture("static/img/Video.mp4")
+cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 def generate_frames():
     while True:
@@ -35,12 +35,12 @@ def index():
         result = cursor.fetchall()
 
         cursor.close()
-
-        return str(result)
+        
+        return render_template('index.html')
     except:
         return 'Error'
     
-    return render_template('index.html')
+    
 
 @app.route('/video')
 def video():
