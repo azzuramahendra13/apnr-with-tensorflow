@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Automatic Plate Number Recognition</title>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-sm bg-light navbar-light border border-top-0 border-left-0 border-right-0 border-secondary">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="#">
+            <img class="mr-3" src="{{ url_for('static', filename='img/KYB-Kayaba-cropped.png') }}" alt="PT Kayaba" style="width: 15%;">
+            Automatic Plate Number Recognition
+        </a>
+    </div>    
+</nav>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="bg-info text-light text-center">Live Camera</h1>
+            <div>
+                <img class="w-100" src="{{ url_for('video') }}">
+            </div>        
+        </div>
+        <div class="col-6">
+            <h1 class="bg-info text-light text-center">Terbaru</h1>
+        </div>
+    </div>
+        
+</div>
+
+{% endblock %}

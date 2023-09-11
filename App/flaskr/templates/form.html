@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Login</title>
+{% endblock %}
+
+{% block body %}
+<form action="/login" method = "POST">
+    <p>nomor kendaraan <input type = "text" name = "nomor_kendaraan" /></p>
+    <p>waktu masuk <input type = "text" name = "waktu_masuk" /></p>
+    <p>waktu_keluar <input type = "text" name = "waktu_keluar" /></p>
+    <p>pemilik <input type = "text" name = "pemilik" /></p>
+    <p>status kendaraan <input type = "text" name = "status_kendaraan" /></p>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>
+{% endblock %}
