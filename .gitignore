@@ -1,2 +1,4 @@
 models/
 workspace/
+openvino_test/
+addons/

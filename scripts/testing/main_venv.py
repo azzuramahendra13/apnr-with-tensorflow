@@ -85,7 +85,8 @@ def get_contours_with_auto_canny(orig_img):
 
     return approx
 
-cap = cv2.VideoCapture('App/flaskr/static/img/Video.mp4')
+# cap = cv2.VideoCapture('App/flaskr/static/img/Video.mp4')
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 while True:
     # Read frame from camera
